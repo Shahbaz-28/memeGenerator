@@ -1,4 +1,3 @@
-// MemePreview.js
 import React from "react";
 import Draggable from "react-draggable";
 import { Move } from "lucide-react";

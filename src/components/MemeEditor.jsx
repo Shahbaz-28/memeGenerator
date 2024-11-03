@@ -1,4 +1,3 @@
-// MemeEditor.js
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Upload, Download, ArrowLeft } from "lucide-react";
@@ -73,6 +72,11 @@ export default function MemeEditor() {
         link.download = "meme.png";
         link.href = canvas.toDataURL("image/png");
         link.click();
+         // Track the download event with Google Analytics
+      window.gtag('event', 'download_meme', {
+        event_category: 'User',
+        event_label: 'Meme Download',
+      });
       });
     }
   };
