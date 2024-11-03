@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import NavSec from "./NavSec";
 
 function HomePage() {
   const [memes, setMemes] = useState([]);
@@ -43,12 +44,10 @@ const handleMemeClick = async (memeUrl) => {
   };
   
   return (
-    <div className="flex flex-col items-center p-6 bg-gray-100 min-h-screen">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">Meme Gallery</h1>
-      <button className="mb-6 px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-lg shadow-md hover:shadow-lg transition">
-        Upload your own template
-      </button>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 w-full max-w-8xl">
+    <>
+    <NavSec/>
+    <div className="flex flex-col items-center bg-gradient-to-br from-purple-100 to-pink-100 p-2  min-h-screen">
+      <div className="grid grid-cols-2 mt-6 md:grid-cols-3 lg:grid-cols-4 gap-2 w-full max-w-8xl">
         {memes.map((meme) => (
           <div
             key={meme.id}
@@ -64,6 +63,7 @@ const handleMemeClick = async (memeUrl) => {
         ))}
       </div>
     </div>
+    </>
   );
 }
 
