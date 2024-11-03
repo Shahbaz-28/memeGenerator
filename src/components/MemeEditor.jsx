@@ -204,12 +204,12 @@ export default function MemeEditor() {
                   max="100"
                   value={textStyle.size}
                   onChange={(e) => handleStyleChange("size", e.target.value)}
-                  className="w-full bg-white text-black border p-2 rounded-lg"
+                  className="w-full bg-white text-black focus:outline-none focus:border-blue-300 transition border p-2 rounded-lg"
                 />
               </div>
             </div>
             {/* Text Color */}
-            <div className="grid grid-cols-2 gap-4 mb-4">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4  gap-4 mb-4 mt-6">
               <div>
                 <label className="block text-black text-sm font-medium mb-1">
                   Text Color
@@ -221,7 +221,7 @@ export default function MemeEditor() {
                   className="w-full h-10 border rounded-md focus:outline-none focus:border-blue-300 transition"
                 />
               </div>
-              {/* Background */}
+
               <div>
                 <label className="block text-sm text-black font-medium mb-1">
                   Background Color
@@ -235,9 +235,7 @@ export default function MemeEditor() {
                   className="w-full h-10 border rounded-md focus:outline-none focus:border-blue-300 transition"
                 />
               </div>
-            </div>
 
-            <div className="grid grid-cols-2 gap-4 mb-4">
               <div>
                 <label className="block text-black text-sm font-medium mb-1">
                   Text Stroke Width
@@ -250,6 +248,7 @@ export default function MemeEditor() {
                   className="w-full border rounded-md p-2 bg-white text-black focus:bg-white focus:ring focus:ring-blue-300 transition"
                 />
               </div>
+
               <div>
                 <label className="block text-black text-sm font-medium mb-1">
                   Text Shadow
